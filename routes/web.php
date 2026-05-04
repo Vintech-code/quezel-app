@@ -2,10 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::view('/', 'app');
 
-Route::get('/auth/{path?}', function () {
-    return view('welcome');
-})->where('path', '.*');
+Route::view('/{any}', 'app')
+    ->where('any', '.*');
