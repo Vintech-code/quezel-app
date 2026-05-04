@@ -1,11 +1,11 @@
 import { useState } from "react"
-import logo from "../../../assets/logo.png"
+import logo from "../../../assets/logo3.png"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-40 border-b hairline-gold glass-light">
+    <header className="sticky top-0 z-40 border-b">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 text-(--dark-espresso)">
         <div className="flex items-center gap-3">
           <img src={logo} alt="Quezel's Cafe" className="h-10 w-10 rounded-full object-cover" />
@@ -43,7 +43,7 @@ export default function Navbar() {
       </div>
       <div className="absolute left-0 right-0 top-full md:hidden">
         <nav
-          className={`mx-6 mb-4 rounded-2xl border border-(--coffee-brown) bg-(--cream-white)/80 p-4 text-sm font-semibold text-(--dark-espresso) shadow-diffuse backdrop-blur-md transition-all duration-300 ${
+          className={`mx-6 mb-4 rounded-2xl border border-(--coffee-brown) bg-(--cream-white) p-4 text-sm font-semibold text-(--dark-espresso) shadow-diffuse transition-all duration-300 ${
             isOpen ? "translate-y-0 opacity-100" : "pointer-events-none -translate-y-2 opacity-0"
           }`}
         >
