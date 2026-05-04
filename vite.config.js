@@ -7,6 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
     base: process.env.VITE_BASE_PATH || "/",
+
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'resources/pages'),
@@ -29,12 +30,13 @@ export default defineConfig({
             includeAssets: ['favicon.ico', 'apple-touch-icon.png'],
 
             manifest: {
-                name: 'Laravel React App',
-                short_name: 'App',
+                name: "Quezel's Cafe Hub",
+                short_name: "Quezel",
                 start_url: '/',
                 display: 'standalone',
                 background_color: '#ffffff',
                 theme_color: '#0f172a',
+
                 icons: [
                     {
                         src: '/logo11_192.png',
@@ -53,5 +55,5 @@ export default defineConfig({
                 globPatterns: ['**/*.{js,css,html,ico,png,svg}']
             }
         })
-    ],
+    ]
 })
