@@ -4,8 +4,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "../css/app.css";
 
 import LandingPage from "@/Landing";
-import SignInPage from "../pages/SignIn";
-import SignUpPage from "../pages/SignUp";
+import SignInPage from "@/SignIn";
+import SignUpPage from "@/SignUp";
+import ForgotPasswordPage from "@/ForgotPassword";
+import ResetPasswordPage from "@/ResetPassword";
+import ProfilePage from "@/Profile";
 
 function App() {
     return (
@@ -14,6 +17,9 @@ function App() {
                 <Route path="/" element={<LandingPage />} />
                 <Route path="/auth/sign-in" element={<SignInPage />} />
                 <Route path="/auth/sign-up" element={<SignUpPage />} />
+                <Route path="/auth/forgot-password" element={<ForgotPasswordPage />} />
+                <Route path="/auth/reset-password" element={<ResetPasswordPage />} />
+                <Route path="/auth/profile" element={<ProfilePage />} />
             </Routes>
         </BrowserRouter>
     );
